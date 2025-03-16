@@ -1,0 +1,51 @@
+# Tienda Apple
+
+Este proyecto es una tienda en línea donde los usuarios pueden explorar productos de Apple, agregar artículos a su carrito de compras y realizar la compra. Utilizo almacenamiento local para guardar los productos en el carrito y mantener la experiencia del usuario persistente.
+
+## Descripción
+
+La aplicación permite a los usuarios navegar por una lista de productos, que incluyen iPhones, Airpods, cables y fundas. Los productos se muestran con su imagen, precio, color y memoria. Los usuarios pueden agregar productos al carrito, ver el total de su compra y vaciar el carrito cuando lo deseen.
+
+### Funciones principales
+
+- **Visualización de productos**: Los productos se cargan dinámicamente y se muestran en tarjetas con imágenes, precios, y detalles.
+- **Carrito de compras**: Los usuarios pueden agregar productos al carrito, ver los artículos en su carrito y vaciarlo si lo desean.
+- **Almacenamiento local**: Utilizo `localStorage` para guardar la información del carrito entre sesiones.
+
+## Instalación
+
+1. Clona el repositorio:
+
+    ```bash
+    git clone https://github.com/mi-usuario/tienda-apple.git
+    ```
+
+2. Este proyecto no requiere dependencias adicionales, ya que todo está hecho con JavaScript, HTML y CSS.
+
+3. **Subir las imágenes a Cloudinary**:
+
+    - Crea una cuenta en [Cloudinary](https://cloudinary.com/).
+    - Sube las imágenes de los productos a Cloudinary.
+    - Actualiza las URLs de las imágenes en el archivo `img.js` con las URLs proporcionadas por Cloudinary.
+
+## Estructura de Archivos
+
+- **index.html**: Contiene la estructura básica de la página web.
+- **style.css**: Estilos de la tienda.
+- **app.js**: Lógica de la tienda, manejo de productos y carrito.
+- **clases.js**: Define la clase `Producto` y crea los productos que se mostrarán en la tienda.
+- **storage.js**: Funciones para gestionar el almacenamiento local.
+- **img.js**: Contiene las URLs de las imágenes almacenadas en Cloudinary.
+
+## Uso
+
+1. Al ingresar a la tienda, se mostrarán los productos disponibles.
+2. Los usuarios pueden hacer clic en el botón **Comprar** para agregar productos al carrito.
+3. Al hacer clic en el ícono del carrito, se abrirá un sidebar con los productos añadidos, el total y botones para vaciar el carrito o proceder con la compra.
+4. El carrito se guarda en el almacenamiento local, por lo que los productos permanecerán en el carrito incluso si el usuario recarga la página o vuelve más tarde.
+
+## Librerías utilizadas
+
+- **Cloudinary**: Para el almacenamiento y gestión de imágenes de productos.
+- **Font Awesome**: Para los íconos del carrito y otros elementos interactivos.
+
