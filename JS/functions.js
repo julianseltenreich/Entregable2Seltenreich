@@ -71,11 +71,14 @@ export function agregarAlCarrito(producto){
   carrito.push(producto);
   setInfoStorage('carrito', carrito);
   actualizarCarrito();
+  actualizarContadorCarrito();
 }
 export function quitarProducto(index) {
   carrito.splice(index, 1);
   removeInfoStorage('carrito', carrito);
   actualizarCarrito();
+  actualizarContadorCarrito();
+
 }
 export function toggleSidebar(){
   const sidebar = document.getElementById('sidebar');
@@ -96,5 +99,13 @@ export function vaciarCarrito(){
   carrito = [];
   clearInfoStorage();
   actualizarCarrito();
+  actualizarContadorCarrito();
 }
 
+function actualizarContadorCarrito() {
+  const contador = document.getElementById('contadorCarrito');
+  if (contador) {
+    contador.textContent = carrito.length;
+    contador.style.display = carrito.length > 0 ? 'inline' : 'none';
+  }
+}

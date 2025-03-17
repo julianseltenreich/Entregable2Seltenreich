@@ -10,7 +10,7 @@ header.innerHTML = `<h1>Tienda Apple <i class="fa-brands fa-apple"></i></h1>`;
 const carritoBtn= document.createElement('button');
 carritoBtn.className ='carritoBtn';
 carritoBtn.id = 'carritoBtn';
-carritoBtn.innerHTML = `<i class="fas fa-shopping-cart"></i>`;
+carritoBtn.innerHTML = `<i class="fas fa-shopping-cart"></i> <span id="contadorCarrito">0</span>`;
 const main = document.querySelector('main');
 main.appendChild(carritoBtn);
 
